@@ -2,10 +2,32 @@ import Image from "next/image";
 
 import { Button } from "@/components/ui/button"
 import ThemeToggle from "./theme-toggle";
-
+import { DashBoardCard } from "@/components/Dashboard/DashBoardCard";
+import {  Folders, MessageCircle, Newspaper, Users } from "lucide-react"
 export default function Home() {
   
   return (
+
+    <>
+
+{/* card tempalte and and dynamic dashboard card  */}
+
+    <div className="flex flex-col md:flex-row justify-between gap-5 mb-5">
+      
+      <DashBoardCard title='Posts' count={100} icon={<Newspaper className="text-slate-500" size={72}/>}/>
+          
+      <DashBoardCard title='Users' count={13} icon={<Users className="text-slate-500" size={72}/>}/>
+          
+      <DashBoardCard title='Categories' count={20} icon={<Folders className="text-slate-500" size={72}/>}/>
+          
+      <DashBoardCard title='Messages' count={100} icon={<MessageCircle className="text-slate-500" size={72}/>}/>
+    
+    </div>
+
+{/* end  card tempalte and and dynamic dashboard card  */}
+
+
+
      <div className="min-h-screen flex items-center justify-center 
      bg-white text-black dark:bg-black dark:text-white  transition-all duration-300
      ">
@@ -20,6 +42,6 @@ export default function Home() {
       <ThemeToggle/>
       </div>
      </div>
-   
+   </>
   );
 }
