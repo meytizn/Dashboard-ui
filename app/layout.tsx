@@ -4,8 +4,9 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "next-themes";
 import Navbar from "@/components/Navbar";
+import Sidebar from "@/components/Sidebar"
 
-const jetbrainsMono = JetBrains_Mono({subsets:['latin'],variable:'--font-mono'});
+const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' });
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,18 +35,31 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col">
-      
-        <ThemeProvider attribute="class" enableSystem defaultTheme="system"> 
 
-        <Navbar></Navbar>
+        <ThemeProvider attribute="class" enableSystem defaultTheme="system">
 
-        {children}
-        
-        
-        
+          <Navbar></Navbar>
+
+
+          {/* sideBar template */}
+
+          <div className="flex">
+            <div className="hidden md:block h-[100vh] w-[300px] bg-red-500">
+              <Sidebar/>
+            </div>
+
+            <div className="p-5 w-full md:max-w-[1140px]">
+              {children}
+            </div>
+
+          </div>
+
+
+          {/* end sideBar template */}
+
         </ThemeProvider>
-        
-        </body>
+
+      </body>
     </html>
   );
 }
