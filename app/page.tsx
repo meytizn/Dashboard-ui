@@ -5,6 +5,7 @@ import ThemeToggle from "./theme-toggle";
 import { DashBoardCard } from "@/components/Dashboard/DashBoardCard";
 import {  Folders, MessageCircle, Newspaper, Users } from "lucide-react"
 import { DashBoardTable } from "../components/Dashboard/DashBoardTable";
+import { DashBoardChart } from "@/components/Dashboard/DashBoardChart";
 export default function Home() {
   
   return (
@@ -27,9 +28,9 @@ export default function Home() {
 
 {/* end  card tempalte and and dynamic dashboard card  */}
 
+<DashBoardChart/>
+
 <DashBoardTable/>
-
-
 
 
      <div className="min-h-screen flex items-center justify-center 
