@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import ThemeToggle from "./theme-toggle";
 import { DashBoardCard } from "@/components/Dashboard/DashBoardCard";
 import {  Folders, MessageCircle, Newspaper, Users } from "lucide-react"
+import { DashBoardTable } from "../components/Dashboard/DashBoardTable";
 export default function Home() {
   
   return (
@@ -25,6 +26,9 @@ export default function Home() {
     </div>
 
 {/* end  card tempalte and and dynamic dashboard card  */}
+
+<DashBoardTable/>
+
 
 
 
