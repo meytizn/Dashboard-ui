@@ -96,7 +96,7 @@ const PostPage = () => {
 
 
                             <TableCell className="text-right">
-                                <Link href={`posts/${invoice.id}`}>
+                                <Link href={`posts/edit/${invoice.id}`}>
                                
                                 <Button className="bg-blue-400 rounded-md ">Edit</Button>
                                  </Link>
