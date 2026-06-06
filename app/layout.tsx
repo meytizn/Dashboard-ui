@@ -5,6 +5,8 @@ import { cn } from "@/lib/utils";
 import { ThemeProvider } from "next-themes";
 import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar"
+import { Toaster } from "sonner";
+
 
 const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' });
 
@@ -57,8 +59,9 @@ export default function RootLayout({
 
           {/* end sideBar template */}
 
+        <Toaster richColors />
+        
         </ThemeProvider>
-
       </body>
     </html>
   );
