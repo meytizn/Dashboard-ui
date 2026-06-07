@@ -38,7 +38,7 @@ const Sidebar = () => {
 
                     <CommandItem>
                         <Folders className="mr-2 h-4 w-4" />
-                        <Link href='/categories'>Categories</Link>
+                        <Link href='/posts'>Categories</Link>
                     </CommandItem>
 
 
@@ -62,7 +62,10 @@ const Sidebar = () => {
                     <CommandItem>
 
                         <User className="mr-2 h-4 w-4" />
+                        
+                        <Link href='/auth'>
                         <span>Profile</span>
+                        </Link>
                         <CommandShortcut>ctrl+P</CommandShortcut>
                     </CommandItem>
 

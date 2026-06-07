@@ -2,6 +2,8 @@ import React from 'react'
 import Image from "next/image";
 import Link from "next/link"
 import logo from '../img/logo.png'
+import mahdi from '../img/mahdi.jpg'
+
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import {
@@ -13,25 +15,39 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import ThemeToggle from '@/app/theme-toggle';
 
 
 
 const Navbar = () => {
     return (
-        <div className='w-full min-h-13 py-2 px-5 flex items-center justify-between dark:bg-red-800 bg-black text-white'>
-            <Link href="/">
-                <Image className='rounded-full' src={logo} alt="dashboard" width={50} />
-            </Link>
+        <div className='w-full min-h-13 py-2 px-5 flex items-center justify-between dark:bg-[#262626] bg-gray-700 text-white'>
 
 
 
 
+            <div className='flex flex-row gap-3 justify-between items-center'>
+
+                <Link href="https://www.linkedin.com/in/mahdi-zamanian-150696231/">
+                    <Image className='rounded-full' src={mahdi} alt="dashboard" width={50} />
+                </Link>
+
+               
 
 
+            </div>
+
+
+
+
+        <div className='flex flex-row gap-3 justify-between items-center'>
+
+  <ThemeToggle />
 
 
 
             <DropdownMenu>
+
                 <DropdownMenuTrigger className='focus:outline-none'>
 
 
@@ -39,7 +55,7 @@ const Navbar = () => {
 
                     <Avatar>
                         <AvatarImage
-                            src="https://github.com/shadcn.png"
+                            src={"https://github.com/shadcn.png"}
                             alt="@shadcn"
                             className="grayscale"
                         />
@@ -50,14 +66,15 @@ const Navbar = () => {
 
 
 
+
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
                     <DropdownMenuGroup>
 
 
-                        <DropdownMenuLabel>My Account</DropdownMenuLabel>
-                        <DropdownMenuItem><Link href='/profile'>Profile</Link></DropdownMenuItem>
-                        <DropdownMenuItem><Link href='/auth'>Logout</Link></DropdownMenuItem>
+                        <DropdownMenuLabel>Dashboard</DropdownMenuLabel>
+                        <DropdownMenuItem><Link href='https://www.linkedin.com/in/mahdi-zamanian-150696231/'>About</Link></DropdownMenuItem>
+                        <DropdownMenuItem><Link href='/auth'>Account</Link></DropdownMenuItem>
 
 
 
@@ -73,6 +90,12 @@ const Navbar = () => {
 
                 </DropdownMenuContent>
             </DropdownMenu>
+
+
+
+
+                </div>
+
 
 
         </div>

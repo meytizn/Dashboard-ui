@@ -35,7 +35,7 @@ export default function Home() {
 <DashBoardTable />
 
 
-     <div className="min-h-screen flex items-center justify-center 
+     {/* <div className="min-h-screen flex items-center justify-center 
      bg-white text-black dark:bg-black dark:text-white  transition-all duration-300
      ">
       <div className="max-w-3xl text-center space-y-10">
@@ -48,7 +48,9 @@ export default function Home() {
       </div>
       <ThemeToggle />
       </div>
-     </div>
+     </div> */}
+
+
    </>
   );
 }

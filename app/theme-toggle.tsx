@@ -7,7 +7,7 @@ export default function ThemeToggle (){
     const {theme , setTheme} = useTheme();
     return(
         <>
-        <Button variant="outline" size="icon" className="rounded-full"
+        <Button variant="outline" size="icon" className="rounded-full text-black dark:bg-white"
         onClick={()=>setTheme(theme==="light" ?"dark":"light")}
         >
 
