@@ -1,11 +1,13 @@
 import Image from "next/image";
 
 import { Button } from "@/components/ui/button"
-import ThemeToggle from "./theme-toggle";
+
 import { DashBoardCard } from "@/components/Dashboard/DashBoardCard";
 import {  Folders, MessageCircle, Newspaper, Users } from "lucide-react"
-import { DashBoardTable } from "../components/Dashboard/DashBoardTable";
+
 import { DashBoardChart } from "@/components/Dashboard/DashBoardChart";
+import ThemeToggle from "../theme-toggle";
+import { DashBoardTable } from "@/components/Dashboard/DashBoardTable";
 export default function Home() {
   
   return (
@@ -30,7 +32,7 @@ export default function Home() {
 
 <DashBoardChart/>
 
-<DashBoardTable/>
+<DashBoardTable />
 
 
      <div className="min-h-screen flex items-center justify-center 
@@ -44,7 +46,7 @@ export default function Home() {
       <Button variant="outline">Button1</Button>
       <Button variant="secondary">Button2</Button>
       </div>
-      <ThemeToggle/>
+      <ThemeToggle />
       </div>
      </div>
    </>

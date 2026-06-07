@@ -40,24 +40,7 @@ export default function RootLayout({
 
         <ThemeProvider attribute="class" enableSystem defaultTheme="system">
 
-          <Navbar></Navbar>
-
-
-          {/* sideBar template */}
-
-          <div className="flex">
-            <div className="hidden md:block h-[100vh] w-[300px] bg-red-500">
-              <Sidebar/>
-            </div>
-
-            <div className="p-5 w-full md:max-w-[1140px]">
-              {children}
-            </div>
-
-          </div>
-
-
-          {/* end sideBar template */}
+            {children}
 
         <Toaster richColors />
         
