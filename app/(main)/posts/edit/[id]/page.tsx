@@ -73,7 +73,7 @@ export default function Page() {
   }
 
   return (
-    <div className="mx-auto max-w-xl p-4">
+    <div className="mx-auto w-full p-4">
       <h1 className="mb-6 text-2xl font-bold">Edit Post</h1>
 
       <form
@@ -155,7 +155,7 @@ export default function Page() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="rounded border px-4 py-2 disabled:cursor-not-allowed disabled:opacity-50"
+          className="rounded border px-4 py-2 disabled:cursor-not-allowed disabled:opacity-50  bg-gray-700 text-white "
         >
           {isSubmitting ? "Updating..." : "Update Post"}
         </button>

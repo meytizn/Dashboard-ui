@@ -14,7 +14,7 @@ const MainLayout = ({children}:{children:React.ReactNode}) => {
               <Sidebar/>
             </div>
 
-            <div className="p-5 w-full md:max-w-[1140px]">
+            <div className="p-5 flex flex-col gap-8 w-full w-full ">
               {children}
             </div>
 
