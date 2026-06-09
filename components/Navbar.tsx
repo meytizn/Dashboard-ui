@@ -18,6 +18,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 import ThemeToggle from '@/app/theme-toggle';
 import { MainContext } from './(context)/MainContext';
+import { LayoutDashboard } from 'lucide-react';
 
 
 
@@ -29,14 +30,18 @@ const Navbar = () => {
 
 
 
-            <div className='flex flex-row gap-3 justify-between items-center'>
+            <div className='flex flex-row gap-x-8 justify-between items-center'>
 
                 <Link href="https://www.linkedin.com/in/mahdi-zamanian-150696231/">
                     <Image className='rounded-full' src={mahdi} alt="dashboard" width={50} />
                 </Link>
 
                
-                 <Button className='bllock md:hidden' onClick={()=>data?.setPhone(!data.phone)}> {data?.phone ? "is on" : "not on"}</Button>
+                 <button  className='md:hidden text-2xl ' onClick={()=>data?.setPhone(!data.phone)}>
+                    
+                     {data?.phone ? "X" : <LayoutDashboard className="mr-2 h-6 w-6"  /> }
+                     
+                     </button>
                         
 
             </div>

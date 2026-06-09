@@ -15,7 +15,7 @@ import Link from "next/link";
 import { useContext } from "react";
 import { MainContext } from "./(context)/MainContext";
 import { Button } from "./ui/button";
-
+import { PanelLeftClose } from 'lucide-react';
 
 
 const Sidebar = () => {
@@ -25,10 +25,10 @@ const Sidebar = () => {
 
     return (
         <>
-                         
+                      
         <Command className="max-w-sm border bg-secondary rounded-none ">
        
-        <Button className="md:hidden block" onClick={()=>data?.setPhone(!data.phone)}> {data?.phone ? "is on" : "not on"}</Button>
+           <Button  variant="ghost" className="md:hidden relative min-h-16 flex flex-row justify-end px-4   " onClick={()=>data?.setPhone(!data.phone)}> {data?.phone ?  (<PanelLeftClose className=" scale-200   " />) : ""}</Button>
        
        
             <CommandInput placeholder="Type a command or search..." />
