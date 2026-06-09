@@ -6,6 +6,7 @@ import { ThemeProvider } from "next-themes";
 import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar"
 import { Toaster } from "sonner";
+import { AppDataProvider } from "@/components/(context)/MainContext";
 
 
 const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' });
@@ -37,14 +38,16 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col">
-
+        <AppDataProvider>
         <ThemeProvider attribute="class" enableSystem defaultTheme="system">
+
 
             {children}
 
         <Toaster richColors />
         
         </ThemeProvider>
+        </AppDataProvider>
       </body>
     </html>
   );

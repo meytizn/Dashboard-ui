@@ -1,3 +1,4 @@
+"use client"
 import {
     Command,
     CommandDialog,
@@ -11,10 +12,25 @@ import {
 } from "@/components/ui/command"
 import { CreditCard, Folders, LayoutDashboard, Newspaper, Settings2Icon, User } from "lucide-react";
 import Link from "next/link";
+import { useContext } from "react";
+import { MainContext } from "./(context)/MainContext";
+import { Button } from "./ui/button";
+import { PanelLeftClose } from 'lucide-react';
+
 
 const Sidebar = () => {
+
+    const data = useContext(MainContext)
+    console.log(data)
+
     return (
+        <>
+                      
         <Command className="max-w-sm border bg-secondary rounded-none ">
+       
+           <Button  variant="ghost" className="md:hidden relative min-h-16 flex flex-row justify-end px-4   " onClick={()=>data?.setPhone(!data.phone)}> {data?.phone ?  (<PanelLeftClose className=" scale-200   " />) : ""}</Button>
+       
+       
             <CommandInput placeholder="Type a command or search..." />
             <CommandList>
                 <CommandEmpty>No results found.</CommandEmpty>
@@ -98,6 +114,7 @@ const Sidebar = () => {
 
             </CommandList>
         </Command>
+        </>
     );
 }
 
