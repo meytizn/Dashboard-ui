@@ -7,6 +7,18 @@ import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar"
 import { Toaster } from "sonner";
 import { AppDataProvider } from "@/components/(context)/MainContext";
+import localFont from "next/font/local"
+
+
+// font
+  const Nunito = localFont({
+        src: '../public/fonts/Nunito-Bold.ttf',
+        weight: '900',
+        style: 'italic',
+        display: 'swap',
+    })
+
+
 
 
 const jetbrainsMono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' });
@@ -37,7 +49,7 @@ export default function RootLayout({
       className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, "font-mono", jetbrainsMono.variable)}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col">
+      <body className={`${Nunito.className} min-h-full flex flex-col`}>
         <AppDataProvider>
         <ThemeProvider attribute="class" enableSystem defaultTheme="system">
 
