@@ -21,7 +21,7 @@ import { PanelLeftClose } from 'lucide-react';
 const Sidebar = () => {
 
     const data = useContext(MainContext)
-    console.log(data)
+    
 
     return (
         <>
